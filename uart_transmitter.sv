@@ -24,6 +24,7 @@ module Uart_Transmitter (uart_if uart);
                 cycle_counter <= 0;
                 uart.busy <= 1;    // setting UART is bussy in sending data (Flag)
             end else if (sending) begin    // Data is in tranmission progress
+                // Here it will start counting from 0 to 433
                 if (cycle_counter == div_counter - 1) begin
                     cycle_counter <= 0;
                     uart.Txd <= tx_shift[bit_index];
