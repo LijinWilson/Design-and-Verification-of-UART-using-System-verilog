@@ -22,7 +22,7 @@ module Uart_Transmitter (uart_if uart);
                 sending <= 1;
                 bit_index <= 0;
                 cycle_counter <= 0;
-                uart.busy <= 1;    // indicates UART is bussy in sending data 
+                uart.busy <= 1;    // setting UART is bussy in sending data (Flag)
             end else if (sending) begin    // Data is in tranmission progress
                 if (cycle_counter == div_counter - 1) begin
                     cycle_counter <= 0;
