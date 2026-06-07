@@ -27,13 +27,13 @@ module Uart_Transmitter (uart_if uart);
                 // Here it will start counting from 0 to 433
                 if (cycle_counter == div_counter - 1) begin
                     cycle_counter <= 0;
-                    uart.Txd <= tx_shift[bit_index];
-                    bit_index <= bit_index + 1;
+                    uart.Txd <= tx_shift[bit_index];    // sending the next bit
+                    bit_index <= bit_index + 1;    // increementing the bit_index bit
 
                     if (bit_index == 9) begin
-                        sending <= 0;
-                        uart.Txd <= 1;
-                        uart.busy <= 0;
+                        sending <= 0;    // data tranmission flag to 0; 
+                        uart.Txd <= 1;    // Making the transmission line back to 0
+                        uart.busy <= 0;    // Returning the bussy flag back to zero
                     end
                 end else begin
                     cycle_counter <= cycle_counter + 1;
