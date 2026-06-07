@@ -58,7 +58,7 @@
 /*
   -  Data Shifting parallel to serial and vice versa.
       -  Data coming to TX of A is in parallel form, Inside a parellel to serial shift register is used to convert the data from parallel to serial
-      - this shift register is using the clock for shifting operation.
+      -  This shift register is using the clock for shifting operation.
       -  Same for RX side a shift register is used to convert the data from serial to back in parallel.
 */
 
