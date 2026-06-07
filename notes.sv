@@ -39,8 +39,25 @@
           -  For Device B
               -  RX -> Clock freq is 50MHz.
                   -  50,000,000/115200  =  434 cycles per bit  =>  BAUD RATE = 8.68μs (time per bit). 
-  
+      - >> Here Device with different internal clock but we make data rate in synchronization. <<
 */
+
+/*
+  -  DETEECTING START BIT
+      -  Reciever device B will be waiting for a falling edge (1 -> 0), which signals a start bit.
+      -  When receiver sees the line go from 1 to 0, it understands that transmission has started. 
+      -  It resets its internal timing and uses that moment as a reference to correctly sample all upcoming bits at the right time.
+*/
+
+
+
+
+
+
+
+
+
+
 
 
 
