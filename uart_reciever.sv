@@ -38,7 +38,7 @@ module Uart_Receiver (uart_if uart);
             uart.valid_rx <= 0;
         end else begin  //  NORMAL OPERATION
             uart.valid_rx <= 0;  // No valid data until it is proven correct and will add later steps
-
+          //     Checking whether cycle_counter == 26(Baud Rate).
             if (cycle_counter == div_counter - 1) begin
                 cycle_counter <= 0;
                 state <= nextstate;
