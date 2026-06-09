@@ -31,8 +31,10 @@ module tb_uart_interface;
         uart.reset = 0;
         #100;
 
+        // Created new environment and initiated
         env = new(uart);
         env.run();
+        // now test bench start exicuting
         $display("[TB] Simulation completed.");
         $finish;
     end
